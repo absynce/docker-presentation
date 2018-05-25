@@ -1,0 +1,14 @@
+/* Custom classes */
+.iwt-logo {
+   /* filter: grayscale(.2); */
+   width: 400px;
+}
+
+.title-slide {
+   text-align: center;
+}
+
+/* Overrides */
+.fragment-content code {
+  font-size: 24px;
+}

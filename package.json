@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "description": "Presentation on Docker written in Elm.",
+  "scripts": {
+    "build": "elm make src/Main.elm --output=elm.js",
+    "dev": "npm run watch -s & npm run start",
+    "start": "elm-reactor -p 8082",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "chokidar \"**/*.elm\" -c \"npm run build\" --initial"
+  },
+  "license": "MIT",
+  "name": "docker-presentation",
+  "keywords": [
+    "elm"
+  ],
+  "author": "Jared M. Smith <absynce@gmail.com>",
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "elm": "^0.18.0"
+  }
+}
