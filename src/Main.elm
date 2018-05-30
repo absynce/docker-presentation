@@ -32,6 +32,10 @@ main =
         [ titleSlide
         , whyDocker
         , consistencyInDevelopment
+        , consistencyInDeployments
+        , consistencyAcrossEnvironments
+        , whatsAContainer
+        , imageHierarchy
         ]
 
 
@@ -88,8 +92,44 @@ ENTRYPOINT ["elm"]
         ]
 
 
+consistencyInDeployments : Slides.Slide
+consistencyInDeployments =
+    Slides.mdFragments
+        [ "# Consistency in deployments"
+        , "* Tag versions (node:9.11.1)"
+        ]
+
+
+consistencyAcrossEnvironments : Slides.Slide
+consistencyAcrossEnvironments =
+    Slides.mdFragments
+        [ "# Consistency across environments"
+        , "* Same dependencies/configuration in local, QA, production environments"
+        ]
+
+
 whatsAContainer : Slides.Slide
 whatsAContainer =
     Slides.mdFragments
-        [ "# What's a container?\n    "
+        [ "# What's a container?"
+        , """
+> A container is launched by running an image. An image is an executable package that includes everything needed to run an application--the code, a runtime, libraries, environment variables, and configuration files.
+>
+>A container is a runtime instance of an image--what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, docker ps, just as you would in Linux."
+"""
         ]
+
+
+imageHierarchy : Slides.Slide
+imageHierarchy =
+    Slides.html <|
+        div [ class "image-hiearchy" ]
+            [ h1 [] [ text "Image Hierarchy" ]
+            , img
+                [ alt "Image Hierarchy"
+
+                -- , class "iwt-logo"
+                , src "images/docker-image-hierarchy.png"
+                ]
+                []
+            ]

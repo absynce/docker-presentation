@@ -16579,11 +16579,70 @@ var _xarvh$elm_slides$Slides$app = F2(
 			});
 	});
 
+var _user$project$Main$imageHierarchy = _xarvh$elm_slides$Slides$html(
+	A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('image-hiearchy'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Image Hierarchy'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$img,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$alt('Image Hierarchy'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src('images/docker-image-hierarchy.png'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {ctor: '[]'}
+			}
+		}));
 var _user$project$Main$whatsAContainer = _xarvh$elm_slides$Slides$mdFragments(
 	{
 		ctor: '::',
-		_0: '# What\'s a container?\n    ',
-		_1: {ctor: '[]'}
+		_0: '# What\'s a container?',
+		_1: {
+			ctor: '::',
+			_0: '\n> A container is launched by running an image. An image is an executable package that includes everything needed to run an application--the code, a runtime, libraries, environment variables, and configuration files.\n>\n>A container is a runtime instance of an image--what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, docker ps, just as you would in Linux.\"\n',
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$consistencyAcrossEnvironments = _xarvh$elm_slides$Slides$mdFragments(
+	{
+		ctor: '::',
+		_0: '# Consistency across environments',
+		_1: {
+			ctor: '::',
+			_0: '* Same dependencies/configuration in local, QA, production environments',
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$consistencyInDeployments = _xarvh$elm_slides$Slides$mdFragments(
+	{
+		ctor: '::',
+		_0: '# Consistency in deployments',
+		_1: {
+			ctor: '::',
+			_0: '* Tag versions (node:9.11.1)',
+			_1: {ctor: '[]'}
+		}
 	});
 var _user$project$Main$consistencyInDevelopment = _xarvh$elm_slides$Slides$mdFragments(
 	{
@@ -16716,7 +16775,23 @@ var _user$project$Main$main = A2(
 			_1: {
 				ctor: '::',
 				_0: _user$project$Main$consistencyInDevelopment,
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: _user$project$Main$consistencyInDeployments,
+					_1: {
+						ctor: '::',
+						_0: _user$project$Main$consistencyAcrossEnvironments,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Main$whatsAContainer,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Main$imageHierarchy,
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
 			}
 		}
 	})();
